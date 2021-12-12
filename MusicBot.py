@@ -13,5 +13,5 @@ for cog in cogs:
     cog.setup(client)
 
 
-client.run(f"{KEY}")
+client.run(KEY)
 
