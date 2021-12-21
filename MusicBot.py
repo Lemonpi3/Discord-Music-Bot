@@ -2,7 +2,7 @@ import music
 import discord
 from discord.ext import commands
 
-KEY = ""  #bot key
+KEY = "KEY"
 
 cogs = [music]
 
@@ -13,5 +13,5 @@ for cog in cogs:
     cog.setup(client)
 
 
-client.run(f"{KEY}")
+client.run(KEY)
 

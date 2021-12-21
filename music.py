@@ -145,8 +145,9 @@ class Player():
 
                     info = ydl.extract_info(f"ytsearch:{song}",download = False)["entries"][0]
                     url2 = info["formats"][0]["url"]
+                    link = info["webpage_url"]
                     source = await discord.FFmpegOpusAudio.from_probe(url2, **FFMPEG_OPTIONS,executable ="../ffmpeg-2021-12-09-git-b9f4c1231f-essentials_build/bin/ffmpeg.exe")
-                    await self.ctx.send(f"Playing {song}. Requested by {self.ctx.author}")
+                    await self.ctx.send(f"Playing {link}. Requested by {self.ctx.author}")
                     vc.play(source, after=self.my_after)
                     
                 else:
